@@ -72,7 +72,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 p-6">
+    <div className="min-h-screen from-gray-50 to-gray-100 p-6">
       <h1 className="text-3xl md:text-4xl font-extrabold text-center mb-8 text-gray-800 tracking-tight">
         Google Maps Data Scraper
       </h1>

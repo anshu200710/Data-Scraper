@@ -128,4 +128,8 @@ app.post("/api/search", async (req, res) => {
   }
 });
 
+app.get('/', (req,res) => {
+  res.send("API IS WORKING")
+})
+
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
