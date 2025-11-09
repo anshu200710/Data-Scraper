@@ -9,6 +9,10 @@ function App() {
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
 
+  const PORT = import.meta.env.VITE_API_URL
+  console.log(PORT);
+  
+
   const handleSearch = async (newSearch = true) => {
     if (!business || !city) {
       alert("Please enter both fields");
@@ -17,11 +21,11 @@ function App() {
 
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:5000/api/search", {
-        business,
-        city,
-        page: newSearch ? 1 : page,
-      });
+          const res = await axios.post(`${PORT}/api/search`, {
+      business,
+      city,
+      page: newSearch ? 1 : page,
+    });
 
       const data = res.data.data || [];
 
